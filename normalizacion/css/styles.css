@@ -1,0 +1,89 @@
+/* Estilo global */
+body {
+    background-color: #ffffff;  /* Fondo blanco */
+    color: #333333;  /* Color de texto gris oscuro */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h2 {
+    color: #e67e22;  /* Color naranja */
+    text-align: center;
+  }
+  
+  /* Estilos de las pestañas */
+  .nav-tabs .nav-link.active {
+    background-color: #e67e22;  /* Naranja cuando la pestaña está activa */
+    color: white;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #e67e22;  /* Naranja para las pestañas no activas */
+  }
+  
+  .nav-tabs {
+    border-bottom: 2px solid #e67e22;  /* Línea debajo de las pestañas */
+  }
+  
+  /* Formulario */
+  .form-label {
+    font-weight: bold;
+    color: #333;  /* Color gris oscuro para las etiquetas */
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group-text {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+  }
+  
+  .btn-primary {
+    background-color: #e67e22;  /* Color naranja */
+    border-color: #e67e22;
+  }
+  
+  .btn-primary:hover {
+    background-color: #d56a1a;  /* Color naranja más oscuro al pasar el ratón */
+    border-color: #d56a1a;
+  }
+  
+  /* Resultados */
+  table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  table th, table td {
+    text-align: center;
+    padding: 12px 15px;
+  }
+  
+  table thead {
+    background-color: #e67e22;  /* Cabecera de la tabla naranja */
+    color: white;
+  }
+  
+  table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;  /* Fondo gris claro para filas impares */
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #fff;  /* Fondo blanco para filas pares */
+  }
+  
+  table tbody tr:hover {
+    background-color: #f1f1f1;  /* Color al pasar el ratón sobre una fila */
+  }
+  
+  table td {
+    font-size: 14px;  /* Fuente más pequeña para las celdas */
+    word-wrap: break-word;  /* Ajustar texto largo dentro de las celdas */
+  }
+  
+  /* Espaciado adicional */
+  .mt-3 {
+    margin-top: 1rem;
+  }
+  

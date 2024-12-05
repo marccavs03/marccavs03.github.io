@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normalización de Direcciones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Normalización de Direcciones</h2>
+
+    <!-- Pestañas -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="direccion-tab" data-bs-toggle="tab" href="#direccion" role="tab" aria-controls="direccion" aria-selected="true">Por Dirección</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="esquina-tab" data-bs-toggle="tab" href="#esquina" role="tab" aria-controls="esquina" aria-selected="false">Por Esquina</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="coordenada-tab" data-bs-toggle="tab" href="#coordenada" role="tab" aria-controls="coordenada" aria-selected="false">Por Coordenada</a>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-3" id="myTabContent">
+      <!-- Formulario por Dirección -->
+      <div class="tab-pane fade show active" id="direccion" role="tabpanel" aria-labelledby="direccion-tab">
+        <form id="direccionForm">
+          <div class="mb-3">
+            <label for="direccionInput" class="form-label">Dirección:</label>
+            <input type="text" class="form-control" id="direccionInput" placeholder="Ej: Loria 300, Lomas">
+          </div>
+          <button type="submit" class="btn btn-primary">Normalizar</button>
+        </form>
+        <div id="resultDireccion" class="mt-3"></div>
+      </div>
+
+      <!-- Formulario por Esquina -->
+      <div class="tab-pane fade" id="esquina" role="tabpanel" aria-labelledby="esquina-tab">
+        <form id="esquinaForm">
+          <div class="mb-3">
+            <label for="esquinaInput" class="form-label">Esquina:</label>
+            <input type="text" class="form-control" id="esquinaInput" placeholder="Ej: Callao y Corrientes">
+          </div>
+          <button type="submit" class="btn btn-primary">Normalizar</button>
+        </form>
+        <div id="resultEsquina" class="mt-3"></div>
+      </div>
+
+      <!-- Formulario por Coordenada -->
+      <div class="tab-pane fade" id="coordenada" role="tabpanel" aria-labelledby="coordenada-tab">
+        <form id="coordenadaForm">
+          <div class="mb-3">
+            <label for="latInput" class="form-label">Latitud:</label>
+            <input type="text" class="form-control" id="latInput" placeholder="Ej: -34.524909">
+          </div>
+          <div class="mb-3">
+            <label for="lngInput" class="form-label">Longitud:</label>
+            <input type="text" class="form-control" id="lngInput" placeholder="Ej: -58.490674">
+          </div>
+          <button type="submit" class="btn btn-primary">Normalizar</button>
+        </form>
+        <div id="resultCoordenada" class="mt-3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
