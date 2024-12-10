@@ -15,9 +15,11 @@ document.getElementById("direccionForm").addEventListener("submit", function(e) 
 
 document.getElementById("esquinaForm").addEventListener("submit", function(e) {
   e.preventDefault();
-  let esquina = document.getElementById("esquinaInput").value;
+  let calle1 = document.getElementById("calle1").value;
+  let calle2 = document.getElementById("calle2").value;
+  let localidad = document.getElementById("localidad").value;
 
-  axios.get(`https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=${encodeURIComponent(esquina)}`)
+  axios.get(`https://servicios.usig.buenosaires.gob.ar/normalizar/?direccion=${calle1} y ${calle2}, ${localidad}`)
     .then(response => {
       let result = response.data.direccionesNormalizadas[0];
       document.getElementById("resultEsquina").innerHTML = mostrarTabla(result);
